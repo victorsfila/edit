@@ -15,13 +15,13 @@ O ponto de partida é um fluxo de 9 etapas usado em vídeos reais, com os bons c
 Abra o Claude Code e cole:
 
 ```
-Instala esta skill para mim: https://github.com/luizflb/fluxo-de-edicao
+Instala esta skill para mim: https://github.com/victorsfila/edit
 ```
 
 Ou, pelo terminal:
 
 ```bash
-git clone https://github.com/luizflb/fluxo-de-edicao ~/.claude/skills/fluxo-de-edicao
+git clone https://github.com/victorsfila/edit ~/.claude/skills/fluxo-de-edicao
 ```
 
 ## Como usar
