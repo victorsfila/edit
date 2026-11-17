@@ -43,11 +43,11 @@ Leia `guias/principios-do-fluxo.md`. Em poucas linhas, diga à pessoa:
 - que o resultado é dela: skills em texto que ela pode ler e mudar.
 
 ## Fase 1. Ambiente
-Confira, sem instalar nada ainda: sistema operacional, Python, FFmpeg, Node.js (o HyperFrames roda por `npx`) e Git.
+Confira, sem instalar nada ainda: sistema operacional (descubra primeiro, e rode só os comandos dele), Python, FFmpeg, Node.js (o HyperFrames roda por `npx`) e Git.
 
 **CPU ou GPU:** leia `guias/cpu-ou-gpu.md`. Descubra a CPU, a RAM, a placa de vídeo e os codificadores de hardware que o FFmpeg enxerga. Para cada tarefa pesada do fluxo (transcrição, prévias, exportação final, leitura da câmera, recorte por IA, animações), diga o que é mais vantajoso **na máquina dela** (CPU, GPU ou nuvem) e por quê, em uma frase. Sempre que houver dúvida real, meça com um trecho de 30 s do material dela antes de decidir. Registre a escolha por tarefa no `montagem.md`.
 
-Mostre o que existe e o que falta. Instale só depois das decisões da fase 2 (só o que o fluxo dela vai usar), explicando cada instalação.
+Mostre o que existe e o que falta. Instale só depois das decisões da fase 2 (só o que o fluxo dela vai usar), explicando cada instalação. A única exceção é o FFmpeg, que `guias/cpu-ou-gpu.md` permite instalar antes, com o "sim" da pessoa, para medir a codificação. A medição da transcrição espera a fase 2 e fica marcada como "a medir" no `montagem.md`.
 
 ## Fase 2. Entrevista
 Leia `guias/decisoes.md` e siga a ordem de lá. A primeira decisão é sempre **onde a pessoa revisa o vídeo** (num programa de edição ou só assistindo ao vídeo pronto), porque ela muda o fluxo inteiro. Para cada decisão: explique as opções em 2–3 linhas, dê a sua sugestão para o caso dela e registre a escolha no `montagem.md`.
