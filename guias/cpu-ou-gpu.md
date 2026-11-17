@@ -3,6 +3,8 @@
 Na fase 1, descubra o que a máquina da pessoa tem e decida, **tarefa por tarefa**, se ela roda na CPU, na GPU ou na nuvem. Não existe resposta única: a mesma máquina pode transcrever melhor na GPU e exportar o final melhor na CPU. Registre a escolha de cada tarefa no `montagem.md`, para as skills das etapas seguirem.
 
 ## 1. Descobrir o hardware (sem instalar nada)
+**Primeiro, o sistema operacional** (Windows, macOS ou Linux: pergunte à pessoa ou veja pelo terminal). Rode **só os comandos do sistema detectado**, abaixo. Não despeje a lista inteira na pessoa.
+
 - **CPU:** modelo, núcleos e threads (Windows: `Get-CimInstance Win32_Processor`; macOS: `sysctl -n machdep.cpu.brand_string hw.ncpu`; Linux: `lscpu`).
 - **Memória RAM:** total (abaixo de 16 GB, evite rodar duas tarefas pesadas ao mesmo tempo).
 - **GPU:**
@@ -25,6 +27,12 @@ Na fase 1, descubra o que a máquina da pessoa tem e decida, **tarefa por tarefa
 | **Áudio** (medir volume, mixar, efeitos) | Nunca. | Sempre: é leve. |
 
 ## 3. Medir antes de decidir (na máquina dela)
+**Ordem, para quem não tem nada instalado:**
+1. Descubra o hardware (seção 1), sem instalar nada.
+2. A medição de **codificação** só precisa do FFmpeg. Se faltar, explique em uma frase e peça o "sim" para instalar **só o FFmpeg**, que o fluxo vai usar de qualquer jeito.
+3. A medição de **transcrição** precisa do Python e da ferramenta de transcrição, que só são instalados depois da fase 2. Até lá, registre a tarefa como "a medir" e use a tabela da seção 2 como palpite provisório. Meça na primeira vez que a etapa de preparar rodar e atualize o `montagem.md`.
+4. Nunca instale algo para medir e deixe a pessoa sem saber: diga o que foi instalado e por quê.
+
 A tabela é ponto de partida. A decisão vem de um teste curto, de 1 a 2 minutos, com um trecho de 30 s do material dela:
 1. **Transcrição:** o mesmo trecho na GPU e na CPU (se a GPU existir). Anote o tempo e se o texto saiu igual.
 2. **Codificação:** o mesmo trecho com o codificador de software e o de hardware, na mesma resolução. Anote tempo e tamanho e mostre um quadro de cada para ela comparar.
